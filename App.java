@@ -8,10 +8,22 @@ import java.text.SimpleDateFormat;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) {
         System.out.println("\n Welcome to Zoo Program!");
+
+        // Create the animal name lists
+        AnimalNameLists animalNames = Utilities.createAnimalNameLists("C:\\Users\\BE218\\testing\\animalNames.txt");
+
+        // Print the lists to verify
+        System.out.println("Hyena Names: " + animalNames.getHyenaNameList());
+        System.out.println("Lion Names: " + animalNames.getLionNameList());
+        System.out.println("Bear Names: " + animalNames.getBearNameList());
+        System.out.println("Tiger Names: " + animalNames.getTigerNameList());
+
+
 
         // This is all the date stuff we did last week
         // The current date
@@ -118,6 +130,7 @@ public class App {
 
         return animalBirthdate;
     }
+
 
 
 }
